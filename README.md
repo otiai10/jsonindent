@@ -1,15 +1,15 @@
 JSON Indent for Go Just for Enjoying Code Golf :golf:
 
-```go
-// What I was doing
-encoder := json.NewEncoder(w)
-encoder.SetIndent("", "\t")
-encoder.Encode(v)
-```
+# You Ain't Gonna Need This
+
+Because this is just a shorthand for [`json.Encoder.SetIndet`](https://godoc.org/encoding/json#Encoder.SetIndent).
 
 ```go
-// I just want to do
 jsonindent.NewEncoder(w).Encode(v)
+// is equivalent to
+// encoder := json.NewEncoder(w)
+// encoder.SetIndent("", "\t")
+// encoder.Encode(v)
 ```
 
 [![Build Status](https://travis-ci.org/otiai10/jsonindent.svg?branch=master)](https://travis-ci.org/otiai10/jsonindent)
